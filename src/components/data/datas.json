@@ -1,0 +1,30 @@
+{
+    "relatives": {
+        "family": {
+            "1": {
+                "name": "Jérôme Nudiste",
+                "relation": "Husband",
+                "phone": "+33625653569"
+            },
+            "2": {
+                "name": "Aline Johnson",
+                "relation": "Daughter",
+                "phone": "+33625653569"
+            },
+            "3": {
+                "name": "Josué Doe",
+                "relation": "Son",
+                "phone": "+33625653569"
+            },
+            "4": {
+                "name": "Paul Cartier",
+                "relation": "Grandson",
+                "phone": "+33625653569"
+            },
+            "5": {
+                "name": "Tristan Mic",
+                "relation": "Grandson",
+                "phone": "+33625653569"
+            }
+    }
+}
