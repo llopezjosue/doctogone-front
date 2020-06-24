@@ -2,8 +2,95 @@
   color: #3F3C3C!important;
   background-color: white!important;
   margin: 15px;
+  border-radius: 3px;
 }
 
 .PrivateTabIndicator-colorSecondary-4 {
   background-color: #168D88!important;
+}
+
+.MuiAppBar-root {
+  width: 93%!important;
+  display: flex;
+  z-index: 1100;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+
+.MuiTab-root {
+  padding: 6px 12px;
+  overflow: hidden;
+  position: relative;
+  font-size: 0.875rem;
+  max-width: 264px;
+  min-width: 72px;
+  box-sizing: border-box;
+  min-height: 48px;
+  text-align: center;
+  flex-shrink: 0;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  line-height: 1.75;
+  white-space: normal;
+  letter-spacing: 0.02857em;
+  text-transform: uppercase;
+}
+
+.MuiTabs-flexContainer {
+  display: flex;
+  justify-content: space-around!important;
+}
+
+.pic {
+  display: flex;
+  justify-content: center;
+}
+
+.contact-container {
+  display: flex;
+  border: 1px grey solid;
+  border-radius: 5px;
+  width: 90%;
+  height: 60px;
+  padding: 15px;
+  margin-top: -45px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: whitesmoke;
+  box-shadow: 2px 5px 5px #168D88;
+}
+
+.contact-name {
+  display: flex;
+  flex-direction: column;
+  width: 215px;
+  height: 60px;
+  border-right: 1px grey solid;
+}
+
+h2, h4 {
+  margin: 0;
+}
+
+.logo-div {
+  display: flex;
+  width: 20%;
+  margin: 0 20px;
+
+  img {
+    width: 80%;
+    height: auto;
+    margin: auto;
+  }
+}
+
+.presentation {
+  display: flex;
+  margin: 30px 10px;
+}
+
+.presentation p {
+  text-align: justify;
+  margin: 0;
 }
