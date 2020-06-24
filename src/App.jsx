@@ -12,7 +12,6 @@ import './App.css';
 function App() {
   return (
     <Router>
-      <NavBar />
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/caregiver" exact component={CaregiverHome} />
