@@ -7,7 +7,9 @@ function Home() {
     <div className="home">
       <div className="item">
         <img src={logoApp} alt="logo app" />
-        <p>FINDING MEMO</p>
+        <p>
+          FINDING <span>MEMO</span>
+        </p>
       </div>
       <section className="item">
         <div className="item">
