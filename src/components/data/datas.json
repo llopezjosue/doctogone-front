@@ -51,5 +51,16 @@
         "phone": "+33625653569"
       }
     }
-  }
+  },
+  "calendar": {
+    "2020": {
+      "06": {
+        "26": {
+          "11 00": "Nurse visit",
+          "15 00": "Appointment with Dr Eastwood"
+        }
+      }
+    }
+  },
+  "appointments": {}
 }
