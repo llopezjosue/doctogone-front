@@ -16,6 +16,14 @@ import Typography from '@material-ui/core/Typography';
 
 
 const useStyles = makeStyles((theme) => ({
+  palette: {
+    primary: {
+      main: '#168D88',
+    },
+    secondary: {
+      main: '#168D88',
+    },
+  },
   paper: {
     padding: '6px 16px',
   },
@@ -29,7 +37,8 @@ export default function Planning() {
 
   return (
     <Timeline align="alternate">
-      <TimelineItem>
+
+      <TimelineItem >
         <TimelineOppositeContent>
           <Typography variant="body2" color="textSecondary">
             9:30 am
@@ -50,6 +59,7 @@ export default function Planning() {
           </Paper>
         </TimelineContent>
       </TimelineItem>
+
       <TimelineItem>
         <TimelineOppositeContent>
           <Typography variant="body2" color="textSecondary">
@@ -71,6 +81,7 @@ export default function Planning() {
           </Paper>
         </TimelineContent>
       </TimelineItem>
+
       <TimelineItem>
         <TimelineOppositeContent>
           <Typography variant="body2" color="textSecondary">
@@ -92,10 +103,55 @@ export default function Planning() {
           </Paper>
         </TimelineContent>
       </TimelineItem>
+
+      <TimelineItem>
+        <TimelineOppositeContent>
+          <Typography variant="body2" color="textSecondary">
+            12:30 am
+          </Typography>
+        </TimelineOppositeContent>
+        <TimelineSeparator>
+          <TimelineDot color="secondary">
+            <FastfoodIcon />
+          </TimelineDot>
+          <TimelineConnector />
+        </TimelineSeparator>
+        <TimelineContent>
+          <Paper elevation={3} className={classes.paper}>
+            <Typography variant="body2" color="textSecondary">
+              Eat
+            </Typography>
+            <Typography>Because you need strength</Typography>
+          </Paper>
+        </TimelineContent>
+      </TimelineItem>
+
+      <TimelineItem>
+        <TimelineOppositeContent>
+          <Typography variant="body2" color="textSecondary">
+            19:30 am
+          </Typography>
+        </TimelineOppositeContent>
+        <TimelineSeparator>
+          <TimelineDot color="secondary">
+            <FastfoodIcon />
+          </TimelineDot>
+          <TimelineConnector />
+        </TimelineSeparator>
+        <TimelineContent>
+          <Paper elevation={3} className={classes.paper}>
+            <Typography variant="body2" color="textSecondary">
+              Eat
+            </Typography>
+            <Typography>Because you need strength</Typography>
+          </Paper>
+        </TimelineContent>
+      </TimelineItem>
+
       <TimelineItem>
       <TimelineOppositeContent>
           <Typography variant="body2" color="textSecondary">
-            19h30 am
+            19h35 am
           </Typography>
         </TimelineOppositeContent>
         <TimelineSeparator>
@@ -112,9 +168,16 @@ export default function Planning() {
           </Paper>
         </TimelineContent>
       </TimelineItem>
+
+
       <TimelineItem>
+      <TimelineOppositeContent>
+          <Typography variant="body2" color="primary">
+            21h30 am
+          </Typography > 
+        </TimelineOppositeContent>
         <TimelineSeparator>
-          <TimelineDot color="primary" variant="outlined">
+          <TimelineDot color="secondary">
             <HotelIcon />
           </TimelineDot>
           <TimelineConnector className={classes.secondaryTail} />
