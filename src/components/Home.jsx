@@ -1,14 +1,32 @@
-import React from 'react';
-
-import CaregiverHome from './Caregiver/CaregiverHome';
-import UserHome from './User/UserHome';
-
+import React from "react";
+import "./Home.scss";
+import logoApp from "../img/twitter.png";
 
 function Home() {
   return (
-    <div className="App">
-        <CaregiverHome />
-        <UserHome />
+    <div className="home">
+      <div className="item">
+        <img src={logoApp} alt="logo app" />
+        <p>FINDING MEMO</p>
+      </div>
+      <section className="item">
+        <div className="item">
+          <p>HELLO,</p>
+          <p>tell us who you are ?</p>
+        </div>
+        <div className="button">
+          <img src={logoApp} alt="arrow" />
+          <p>I'm a patient</p>
+        </div>
+        <div className="button">
+          <img src={logoApp} alt="arrow" />
+          <p>I'm a caregiver</p>
+        </div>
+      </section>
+      <div className="item">
+        <img src={logoApp} alt="account" />
+        <p>I' already have account'</p>
+      </div>
     </div>
   );
 }

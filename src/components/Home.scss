@@ -1,0 +1,24 @@
+.home {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: cadetblue;
+
+  .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .button {
+    display: flex;
+    border-radius: 30px;
+    background-color: cornsilk;
+  }
+
+  img {
+    width: 50px;
+  }
+}
