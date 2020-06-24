@@ -18,7 +18,7 @@ function App() {
         <Route path="/user" exact component={UserHome} />
         <Route path="/user/sos" exact component={SOS} />
         <Route path="/user/my-infos" exact component={MyInfos} />
-        <Route path="/user/my-planing" exact component={MyPlanning} />
+        <Route path="/user/my-planning" exact component={MyPlanning} />
         <Route path="/user/my-relatives" exact component={MyRelatives} />
       </Switch>
     </Router>
