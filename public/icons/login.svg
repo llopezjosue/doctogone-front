@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="51px" height="51px" viewBox="0 0 51 51" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>Group 3</title>
+    <desc>Created with Sketch.</desc>
+    <g id="MAQUETTE" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-264.000000, -24.000000)">
+            <g id="Group-3" transform="translate(264.000000, 24.000000)">
+                <g id="np_person_1995015_000000" transform="translate(15.000000, 10.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                    <path d="M17.1181096,13 C15.5206082,14.5059939 13.3509863,15.4095902 11,15.4095902 C8.6490137,15.4095902 6.47945205,14.5059939 4.88189041,13 C1.92822466,15.3789884 0,19.083914 0,21.9453023 C0,26.4940061 1.65753425,28 11,28 C20.3424658,28 22,26.4940061 22,21.9453023 C22,19.083914 20.0717151,15.3800727 17.1181096,13 Z" id="Path"></path>
+                    <path d="M18,7 C18,10.8654564 14.8654564,14 11,14 C7.13454358,14 4,10.8654564 4,7 C4,3.13454358 7.13454358,0 11,0 C14.8654564,0 18,3.13454358 18,7" id="Path"></path>
+                </g>
+                <g id="Oval-2" fill="#FFFFFF" opacity="0.146647135">
+                    <circle id="Oval" cx="25.5" cy="25.5" r="25.5"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
