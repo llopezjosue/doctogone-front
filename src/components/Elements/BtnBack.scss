@@ -1,0 +1,17 @@
+.back {
+  display: flex;
+  background-color: #168d88;
+
+  align-items: center;
+
+  .icon {
+    background-color: #16726f;
+    padding: 30px;
+  }
+
+  .txt {
+    margin-left: 15px;
+    color: white;
+    text-decoration: none;
+  }
+}
