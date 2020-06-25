@@ -49,6 +49,8 @@
 
 .contact-container {
   display: flex;
+  position: relative;
+  z-index: 2;
   border: 1px grey solid;
   border-radius: 5px;
   width: 90%;
