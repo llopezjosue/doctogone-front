@@ -1,54 +1,53 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logos from "../../img/twitter.png";
 import map from "../../img/map.jpg";
 import "./UserHome.scss";
 
 function UserHome() {
   return (
     <div className="user-home">
-      <div className="menu-item">
+      <div className="menu-item alert">
         <div className="img-div">
-          <img src={logos} alt="logo" />
+          <img src="/img/alert.png" />
         </div>
         <div>
-          <p>in 5 minutes</p>
+          <h2>in 5 minutes</h2>
           <p>visite de l'infirmière</p>
         </div>
       </div>
       <Link to="/user/my-planning" className="menu-item">
         <div className="img-div">
-          <img src={logos} alt="logo" />
+          <img src="/img/planning.png" />
         </div>
         <div>
-          <p>My planning</p>
+          <h2>My planning</h2>
           <p>mon programme du jour</p>
         </div>
       </Link>
       <Link to="/user/my-relatives" className="menu-item">
         <div className="img-div">
-          <img src={logos} alt="logo" />
+          <img src="/img/relative.png" />
         </div>
         <div>
-          <p>My relatives</p>
+          <h2>My relatives</h2>
           <p>name and photos</p>
         </div>
       </Link>
       <Link to="/user/my-infos" className="menu-item">
         <div className="img-div">
-          <img src={logos} alt="logo" />
+          <img src="/img/infos.png" />
         </div>
         <div>
-          <p>My infos</p>
+          <h2>My infos</h2>
           <p>santé, adresse</p>
         </div>
       </Link>
       <Link to="/user/sos" className="menu-item">
         <div className="img-div">
-          <img src={logos} alt="logo" />
+          <img src="/img/sos.png" />
         </div>
         <div>
-          <p>SOS</p>
+          <h2>SOS</h2>
           <p>Alert pompier or family</p>
         </div>
       </Link>
