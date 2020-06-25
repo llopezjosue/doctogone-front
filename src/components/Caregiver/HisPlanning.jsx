@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Timeline from "@material-ui/lab/Timeline";
 import TimelineItem from "@material-ui/lab/TimelineItem";
@@ -14,6 +14,7 @@ import LocalHospitalIcon from "@material-ui/icons/LocalHospital";
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 import datas from "../../components/data/datas.json";
+import PostEvent from "./PostEvent.jsx";
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -26,37 +27,80 @@ const useStyles = makeStyles((theme) => ({
 
 export default function HisPlanning() {
   const classes = useStyles();
+  const [locDatas, setLocDatas] = useState(
+    JSON.parse(window.localStorage.getItem("event"))
+  );
+  const [whenClicking, useWhenClicking] = useState(false);
+
+  useEffect(() => {
+    setLocDatas(JSON.parse(window.localStorage.getItem("event")));
+  }, [whenClicking]);
 
   return (
-    <Timeline align="alternate">
-      {datas.events.map((event) => {
-        return (
-          <TimelineItem>
-            <TimelineOppositeContent>
-              <Typography variant="body2" color="textSecondary">
-                {event.hour}
-              </Typography>
-            </TimelineOppositeContent>
-            <TimelineSeparator>
-              <TimelineDot color="primary">
-                {event.category === "medic" && <LocalHospitalIcon />}
-                {event.category === "meal" && <FastfoodIcon />}
-                {event.category === "sleep" && <HotelIcon />}
-                {event.category === "social" && <LaptopMacIcon />}
-              </TimelineDot>
-              <TimelineConnector />
-            </TimelineSeparator>
-            <TimelineContent>
-              <Paper elevation={3} className={classes.paper}>
-                <Typography variant="h6" component="h1">
-                  {event.title}
+    <>
+      <PostEvent
+        whenClicking={whenClicking}
+        useWhenClicking={useWhenClicking}
+      />
+      <Timeline align="alternate">
+        {locDatas &&
+          locDatas.map((event) => {
+            return (
+              <TimelineItem>
+                <TimelineOppositeContent>
+                  <Typography variant="body2" color="textSecondary">
+                    {event.hour}
+                  </Typography>
+                </TimelineOppositeContent>
+                <TimelineSeparator>
+                  <TimelineDot color="primary">
+                    {event.category === "medic" && <LocalHospitalIcon />}
+                    {event.category === "meal" && <FastfoodIcon />}
+                    {event.category === "sleep" && <HotelIcon />}
+                    {event.category === "social" && <LaptopMacIcon />}
+                  </TimelineDot>
+                  <TimelineConnector />
+                </TimelineSeparator>
+                <TimelineContent>
+                  <Paper elevation={3} className={classes.paper}>
+                    <Typography variant="h6" component="h1">
+                      {event.title}
+                    </Typography>
+                    <Typography> {event.description}</Typography>
+                  </Paper>
+                </TimelineContent>
+              </TimelineItem>
+            );
+          })}
+        {datas.events.map((event) => {
+          return (
+            <TimelineItem>
+              <TimelineOppositeContent>
+                <Typography variant="body2" color="textSecondary">
+                  {event.hour}
                 </Typography>
-                <Typography> {event.description}</Typography>
-              </Paper>
-            </TimelineContent>
-          </TimelineItem>
-        );
-      })}
-    </Timeline>
+              </TimelineOppositeContent>
+              <TimelineSeparator>
+                <TimelineDot color="primary">
+                  {event.category === "medic" && <LocalHospitalIcon />}
+                  {event.category === "meal" && <FastfoodIcon />}
+                  {event.category === "sleep" && <HotelIcon />}
+                  {event.category === "social" && <LaptopMacIcon />}
+                </TimelineDot>
+                <TimelineConnector />
+              </TimelineSeparator>
+              <TimelineContent>
+                <Paper elevation={3} className={classes.paper}>
+                  <Typography variant="h6" component="h1">
+                    {event.title}
+                  </Typography>
+                  <Typography> {event.description}</Typography>
+                </Paper>
+              </TimelineContent>
+            </TimelineItem>
+          );
+        })}
+      </Timeline>
+    </>
   );
 }
