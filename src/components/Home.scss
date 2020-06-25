@@ -6,6 +6,17 @@
   justify-content: space-around;
   background-color: #168d88;
 
+  .item-text {
+    h1 {
+      margin-bottom: 0px;
+      text-align: center;
+    }
+  }
+
+  .logo {
+    padding: 30px;
+  }
+
   .item {
     display: flex;
     flex-direction: column;
@@ -22,6 +33,7 @@
     &.light {
       color: #168d88;
       background-color: white;
+      margin-bottom: 15px;
     }
 
     img {
@@ -29,7 +41,57 @@
     }
   }
 
-  img {
-    width: 50px;
+  .illustration-home {
+    margin-top: 47px;
   }
+}
+
+.light {
+  background-color: #d3e8ee;
+  .button {
+    display: flex;
+    padding: 15px;
+    border-radius: 40px;
+    color: white;
+    background-color: #12a49e;
+    text-align: center;
+    justify-content: center;
+
+    &.light {
+      color: #168d88;
+      background-color: white;
+    }
+    img {
+      margin-right: 10px;
+    }
+  }
+  .container {
+    h1 {
+      color: #12a49e;
+    }
+    padding: 30px;
+    text-align: center;
+    font-size: 22px;
+    color: #424242;
+  }
+}
+
+.img-block {
+  margin-bottom: -20px;
+}
+
+.data-number {
+  padding: 35px;
+  background-color: #168d88;
+  text-align: center;
+  justify-content: center;
+  color: white;
+  h1 {
+    margin: -15px;
+    margin-top: 15px;
+  }
+}
+
+.copyright {
+  margin-top: 60px;
 }
