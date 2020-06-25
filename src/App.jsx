@@ -1,17 +1,19 @@
-import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Home from './components/Home';
-import UserHome from './components/User/UserHome';
-import MyInfos from './components/User/MyInfos';
-import MyPlanning from './components/User/MyPlanning';
-import MyRelatives from './components/User/MyRelatives';
-import SOS from './components/User/SOS';
-import CaregiverHome from './components/Caregiver/CaregiverHome';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Home from "./components/Home";
+import UserHome from "./components/User/UserHome";
+import MyInfos from "./components/User/MyInfos";
+import MyPlanning from "./components/User/MyPlanning";
+import MyRelatives from "./components/User/MyRelatives";
+import SOS from "./components/User/SOS";
+import CaregiverHome from "./components/Caregiver/CaregiverHome";
+import Nav from "./components/Elements/Nav";
+import "./App.css";
 
 function App() {
   return (
     <Router>
+      <Nav />
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/caregiver" exact component={CaregiverHome} />

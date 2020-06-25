@@ -16,7 +16,7 @@ function Home() {
           <p>HELLO,</p>
           <p>tell us who you are ?</p>
         </div>
-        <div className="button">
+        <div className="button light">
           <img src={logoApp} alt="arrow" />
           <p>I'm a patient</p>
         </div>
