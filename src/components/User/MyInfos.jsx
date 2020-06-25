@@ -35,7 +35,7 @@ export default function DenseTable() {
       <div className="cardInfos"> 
       <div>
         <h3>My name is David Grant </h3>
-        <h3> I live in Toulouse and I am 72 years old </h3>
+        <h3> I live 3 place des Carmes Toulouse and I am 72 yo</h3>
       </div>
        
       </div>

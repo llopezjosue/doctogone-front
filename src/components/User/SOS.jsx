@@ -10,7 +10,7 @@ function SOS() {
         <Pulse>
           <div className="sos-card">
             <div className="header">
-              <h1>Primary Emergency</h1>
+              <h1>Life-Threatening Emergency</h1>
             </div>
             <div className="img">
               <img src="/img/sos-health.png"></img>

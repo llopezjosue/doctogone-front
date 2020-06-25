@@ -22,8 +22,8 @@ function UserHome({ alertClick, setAlertClick }) {
               <img src="/img/alert.png" />
             </div>
             <div>
-              <h1>in 5 minutes</h1>
-              <p>visite de l'infirmière</p>
+              <h1>In 1 minute</h1>
+              <p>Take my medication</p>
             </div>
           </div>
         ) : (
@@ -32,8 +32,8 @@ function UserHome({ alertClick, setAlertClick }) {
               <img src="/img/alert.png" />
             </div>
             <div>
-              <h1>in 35 minutes</h1>
-              <p>30 grammes de doliprane</p>
+              <h1>In 35 minutes</h1>
+              <p>Take two doliprane</p>
             </div>
           </div>
         )}
@@ -42,8 +42,8 @@ function UserHome({ alertClick, setAlertClick }) {
             <img src="/img/planning.png" />
           </div>
           <div>
-            <h2>My planning</h2>
-            <p>mon programme du jour</p>
+            <h2>My Planning</h2>
+            <p>Daily Programm</p>
           </div>
         </Link>
         <Link to="/user/my-relatives" className="menu-item">
@@ -51,8 +51,8 @@ function UserHome({ alertClick, setAlertClick }) {
             <img src="/img/relative.png" />
           </div>
           <div>
-            <h2>My relatives</h2>
-            <p>name and photos</p>
+            <h2>My Relatives</h2>
+            <p>Names and Photos</p>
           </div>
         </Link>
         <Link to="/user/my-infos" className="menu-item">
@@ -60,8 +60,8 @@ function UserHome({ alertClick, setAlertClick }) {
             <img src="/img/infos.png" />
           </div>
           <div>
-            <h2>My infos</h2>
-            <p>santé, adresse</p>
+            <h2>My Infos</h2>
+            <p>Address & Health</p>
           </div>
         </Link>
         <Link to="/user/sos" className="menu-item">
@@ -70,12 +70,12 @@ function UserHome({ alertClick, setAlertClick }) {
           </div>
           <div>
             <h2>SOS</h2>
-            <p>Alert pompier or family</p>
+            <p>Alert 911 or Family</p>
           </div>
         </Link>
       </div>
 
-      <div className="copyright">Copyright - 2020 blabvlbavlab</div>
+      <div className="copyright">Copyright - 2020 Doctogone</div>
     </div>
   );
 }
