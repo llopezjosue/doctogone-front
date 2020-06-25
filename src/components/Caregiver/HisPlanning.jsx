@@ -42,6 +42,7 @@ export default function HisPlanning() {
     <>
       <div>
         <div>
+          <h2>Post an event</h2>
           <PostEvent
             whenClicking={whenClicking}
             useWhenClicking={useWhenClicking}
