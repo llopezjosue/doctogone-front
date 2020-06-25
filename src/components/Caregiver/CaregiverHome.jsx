@@ -31,7 +31,7 @@ function CaregiverHome() {
         </div>
         <div>
           <p>His relatives</p>
-          <p>Add info and photos</p>
+          <p>Add infos and photos</p>
         </div>
       </Link>
       <Link to="/caregiver/his-infos" className="menu-item">
@@ -39,7 +39,7 @@ function CaregiverHome() {
           <img src={logos} alt="logo" />
         </div>
         <div>
-          <p>His info</p>
+          <p>His infos</p>
           <p>Health and personal details</p>
         </div>
       </Link>
