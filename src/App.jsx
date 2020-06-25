@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './components/Home';
@@ -10,11 +9,12 @@ import MyRelatives from './components/User/MyRelatives';
 import SOS from './components/User/SOS';
 import CaregiverHome from './components/Caregiver/CaregiverHome';
 import './App.css';
-
+import Nav from './components/Elements/Nav';
 
 function App() {
   return (
     <Router>
+      <Nav />
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/login" exact component={Login} />
