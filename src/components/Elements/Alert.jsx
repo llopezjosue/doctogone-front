@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Modal from "@material-ui/core/Modal";
 import "./Alert.scss";
@@ -22,11 +22,19 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function SimpleModal() {
+export default function SimpleModal({ alertClick }) {
   const classes = useStyles();
   // getModalStyle is not a pure function, we roll the style only on the first render
   const [modalStyle] = React.useState();
   const [open, setOpen] = React.useState(false);
+
+  const buttonClick = useRef(null);
+
+  useEffect(() => {
+    if (alertClick) {
+      buttonClick.current.click();
+    }
+  }, [alertClick]);
 
   const handleOpen = () => {
     setOpen(true);
@@ -70,7 +78,13 @@ export default function SimpleModal() {
 
   return (
     <div>
-      <button type="button" onClick={handleOpen}>
+      <button
+        className="popButton"
+        type="button"
+        onClick={handleOpen}
+        ref={buttonClick}
+        style={{ display: "none" }}
+      >
         Open Modal
       </button>
       <Modal

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./components/Home";
 import Login from "./components/Login";
@@ -19,9 +19,11 @@ import "./App.css";
 import Alert from "./components/Elements/Alert";
 
 function App() {
+  const [alertClick, setAlertClick] = useState(false);
+
   return (
     <Router>
-      <Alert />
+      <Alert alertClick={alertClick} />
       <Nav />
       <Switch>
         <Route path="/" exact component={Home} />
@@ -32,7 +34,13 @@ function App() {
         <Route path="/caregiver/his-planning" exact component={HisPlanning} />
         <Route path="/caregiver/his-stats" exact component={HisStats} />
         <Route path="/caregiver/send-photos" exact component={SendPhotos} />
-        <Route path="/user" exact component={UserHome} />
+        <Route
+          path="/user"
+          exact
+          component={() => (
+            <UserHome alertClick={alertClick} setAlertClick={setAlertClick} />
+          )}
+        />
         <Route path="/user/sos" exact component={SOS} />
         <Route path="/user/my-infos" exact component={MyInfos} />
         <Route path="/user/my-planning" exact component={MyPlanning} />

@@ -1,11 +1,18 @@
 import React from "react";
-import { Button, Form, FormGroup, Label, Input, FormText } from "reactstrap";
-import { Accordion, Card } from "react-bootstrap";
+import TextField from "@material-ui/core/TextField";
+import Button from "@material-ui/core/Button";
+import Select from "@material-ui/core/Select";
+import Grid from "@material-ui/core/Grid";
 
 class PostEvent extends React.Component {
-  constructor(props) {
+  constructor(props, useStyles) {
     super(props);
-    this.state = { title: "", description: "", hour: "", category: "" };
+    this.state = {
+      title: "",
+      description: "",
+      hour: "",
+      category: "",
+    };
     this.handleChangeTitle = this.handleChangeTitle.bind(this);
     this.handleChangeDescription = this.handleChangeDescription.bind(this);
     this.handleChangeHour = this.handleChangeHour.bind(this);
@@ -39,72 +46,78 @@ class PostEvent extends React.Component {
 
   render() {
     return (
-      <Accordion defaultActiveKey="1">
-        <Card>
-          <Card.Header>
-            <Accordion.Toggle as={Button} variant="link" eventKey="0">
-              Add a new event
-            </Accordion.Toggle>
-          </Card.Header>
-          <Accordion.Collapse eventKey="0">
-            <Card.Body>
-              <Form className="post-form">
-                <FormGroup>
-                  <Label for="title">Title</Label>
-                  <Input
-                    type="text"
-                    name="title"
-                    id="title"
-                    placeholder="Enter your text"
-                    value={this.state.title}
-                    onChange={this.handleChangeTitle}
-                  />
-                </FormGroup>
-                <FormGroup>
-                  <Label for="description">Description</Label>
-                  <Input
-                    type="text"
-                    name="description"
-                    id="description"
-                    placeholder="Enter your text"
-                    value={this.state.description}
-                    onChange={this.handleChangeDescription}
-                  />
-                </FormGroup>
-                <FormGroup>
-                  <Label for="time">Time</Label>
-                  <Input
-                    type="time"
-                    name="time"
-                    id="time"
-                    placeholder="Enter the hour"
-                    value={this.state.hour}
-                    onChange={this.handleChangeHour}
-                  />
-                </FormGroup>
-                <FormGroup>
-                  <Label for="exampleSelect">Select</Label>
-                  <Input
-                    type="select"
-                    name="category"
-                    id="category"
-                    onChange={this.handleChangeCategory}
-                  >
-                    <option value="" selected disabled hidden>
-                      Choose a category
-                    </option>
-                    <option value="medic">medic</option>
-                    <option value="meal">meal</option>
-                    <option value="sleep">sleep</option>
-                    <option value="social">social</option>
-                  </Input>
-                </FormGroup>
-                <Button onClick={this.handleSubmit}>Submit</Button>
-              </Form>
-            </Card.Body>
-          </Accordion.Collapse>
-        </Card>
-      </Accordion>
+      <div className="complete-form" style={{ padding: "30px" }}>
+        <form noValidate autoComplete="off">
+          <Grid container>
+            <Grid item xs={12}>
+              <TextField
+                id="standard-basic"
+                label="Title"
+                value={this.state.title}
+                onChange={this.handleChangeTitle}
+                fullWidth
+                style={{ marginBottom: "10px" }}
+              />
+            </Grid>
+            <Grid item xs={12}>
+              <TextField
+                id="standard-basic"
+                label="Description"
+                value={this.state.description}
+                onChange={this.handleChangeDescription}
+                fullWidth
+                style={{ marginBottom: "10px" }}
+              />
+            </Grid>
+            <Grid item xs={12}>
+              <TextField
+                id="time"
+                label="Hour"
+                type="time"
+                defaultValue="07:30"
+                InputLabelProps={{
+                  shrink: true,
+                }}
+                inputProps={{
+                  step: 300, // 5 min
+                }}
+                value={this.state.hour}
+                onChange={this.handleChangeHour}
+                style={{ marginBottom: "10px" }}
+              />
+            </Grid>
+            <Grid item xs={12}>
+              <Select
+                native
+                value={this.state.category}
+                onChange={this.handleChangeCategory}
+                inputProps={{
+                  name: "age",
+                  id: "age-native-simple",
+                }}
+                fullWidth
+                style={{ marginBottom: "25px" }}
+              >
+                <option value="" selected disabled hidden>
+                  Choose a category
+                </option>
+                <option value="medic">medic</option>
+                <option value="meal">meal</option>
+                <option value="sleep">sleep</option>
+                <option value="social">social</option>
+              </Select>
+            </Grid>
+          </Grid>
+        </form>
+        <Button
+          onClick={this.handleSubmit}
+          variant="contained"
+          color="primary"
+          disableElevation
+        >
+          Send
+        </Button>
+      </div>
     );
   }
 }

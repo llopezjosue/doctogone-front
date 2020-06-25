@@ -1,24 +1,42 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import "./UserHome.scss";
 
-function UserHome() {
+function UserHome({ alertClick, setAlertClick }) {
+  useEffect(() => {
+    setTimeout(() => {
+      setAlertClick(true);
+    }, 1500);
+  }, []);
+
   return (
     <div className="user-home">
       <div>
         <img src="/img/home-alert.png"></img>
       </div>
       <div>
-        <div className="menu-item alert">
-          <div className="img-div alertimg">
-            <img src="/img/alert.png" />
+        {!alertClick ? (
+          <div className="menu-item alert">
+            <div className="img-div alertimg">
+              <img src="/img/alert.png" />
+            </div>
+            <div>
+              <h1>in 5 minutes</h1>
+              <p>visite de l'infirmière</p>
+            </div>
           </div>
-          <div>
-            <h1>in 5 minutes</h1>
-            <p>visite de l'infirmière</p>
+        ) : (
+          <div className="menu-item alert">
+            <div className="img-div alertimg">
+              <img src="/img/alert.png" />
+            </div>
+            <div>
+              <h1>in 35 minutes</h1>
+              <p>30 grammes de doliprane</p>
+            </div>
           </div>
-        </div>
+        )}
         <Link to="/user/my-planning" className="menu-item">
           <div className="img-div">
             <img src="/img/planning.png" />
