@@ -1,16 +1,18 @@
-
-import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Home from './components/Home';
-import Login from './components/Login';
-import UserHome from './components/User/UserHome';
-import MyInfos from './components/User/MyInfos';
-import MyPlanning from './components/User/MyPlanning';
-import MyRelatives from './components/User/MyRelatives';
-import SOS from './components/User/SOS';
-import CaregiverHome from './components/Caregiver/CaregiverHome';
-import './App.css';
-
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Home from "./components/Home";
+import Login from "./components/Login";
+import UserHome from "./components/User/UserHome";
+import MyInfos from "./components/User/MyInfos";
+import MyPlanning from "./components/User/MyPlanning";
+import MyRelatives from "./components/User/MyRelatives";
+import SOS from "./components/User/SOS";
+import CaregiverHome from "./components/Caregiver/CaregiverHome";
+import HisInfos from "./components/Caregiver/HisInfos";
+import HisPlanning from "./components/Caregiver/HisPlanning";
+import HisStats from "./components/Caregiver/HisStats";
+import SendPhotos from "./components/Caregiver/SendPhotos";
+import "./App.css";
 
 function App() {
   return (
@@ -19,6 +21,10 @@ function App() {
         <Route path="/" exact component={Home} />
         <Route path="/login" exact component={Login} />
         <Route path="/caregiver" exact component={CaregiverHome} />
+        <Route path="/caregiver/his-infos" exact component={HisInfos} />
+        <Route path="/caregiver/his-planning" exact component={HisPlanning} />
+        <Route path="/caregiver/his-stats" exact component={HisStats} />
+        <Route path="/caregiver/send-photos" exact component={SendPhotos} />
         <Route path="/user" exact component={UserHome} />
         <Route path="/user/sos" exact component={SOS} />
         <Route path="/user/my-infos" exact component={MyInfos} />
