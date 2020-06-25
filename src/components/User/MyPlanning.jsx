@@ -1,11 +1,12 @@
 import React from 'react';
-
+import Planning from './Planning';
 
 
 function MyPlanning() {
   return (
     <div className="App">
-      <h1>My Planning</h1>
+        <h2>Planning of the Day</h2>
+        <Planning />
     </div>
   );
 }
