@@ -12,8 +12,8 @@ function CaregiverHome() {
           <img src={logos} alt="logo" />
         </div>
         <div>
-          <p>Taches</p>
-          <p>2/5 effectuées</p>
+          <p>Tasks</p>
+          <p>Track tasks</p>
         </div>
       </div>
       <Link to="/caregiver/his-planning" className="menu-item">
@@ -21,8 +21,8 @@ function CaregiverHome() {
           <img src={logos} alt="logo" />
         </div>
         <div>
-          <p>Son planning</p>
-          <p>Ajouter des evenements</p>
+          <p>His planning</p>
+          <p>Add events</p>
         </div>
       </Link>
       <Link to="/caregiver/send-photos" className="menu-item">
@@ -30,8 +30,8 @@ function CaregiverHome() {
           <img src={logos} alt="logo" />
         </div>
         <div>
-          <p>Send photos</p>
-          <p>name and photos</p>
+          <p>His relatives</p>
+          <p>Add info and photos</p>
         </div>
       </Link>
       <Link to="/caregiver/his-infos" className="menu-item">
@@ -39,8 +39,8 @@ function CaregiverHome() {
           <img src={logos} alt="logo" />
         </div>
         <div>
-          <p>Ses infos</p>
-          <p>santé, adresse</p>
+          <p>His info</p>
+          <p>Health and personal details</p>
         </div>
       </Link>
       <Link to="/caregiver/his-stats" className="menu-item">
@@ -48,8 +48,8 @@ function CaregiverHome() {
           <img src={logos} alt="logo" />
         </div>
         <div>
-          <p>Statistiques</p>
-          <p>compte rendu</p>
+          <p>Stats</p>
+          <p>Record</p>
         </div>
       </Link>
       <img className="caregiver-map" src={map} alt="map" />
