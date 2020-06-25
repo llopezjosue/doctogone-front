@@ -26,9 +26,6 @@ function Home() {
               <p>I am a caregiver</p>
             </div>
           </Link>
-          <div className="item">
-            <p>I already have an account</p>
-          </div>
         </section>
 
         <div className="illustration-home">
