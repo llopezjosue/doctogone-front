@@ -1,0 +1,36 @@
+.caregiver-home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: gray;
+
+  .menu-item {
+    display: flex;
+    align-items: center;
+    border-radius: 3px;
+    box-shadow: 3px 3px 3px black;
+    background-color: white;
+    width: 90vw;
+    margin-bottom: 2vh;
+    text-decoration: none;
+    color: black;
+
+    .img-div {
+      display: flex;
+      width: 20%;
+      margin: 5%;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    p {
+      text-align: start;
+    }
+  }
+
+  .caregiver-map {
+    width: 100vw;
+  }
+}

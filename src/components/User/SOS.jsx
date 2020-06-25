@@ -1,5 +1,6 @@
 import React from "react";
 import Pulse from "react-reveal/Zoom";
+import BtnBack from "../Elements/BtnBack";
 import "./SOS.scss";
 
 function SOS() {
@@ -45,6 +46,8 @@ function SOS() {
           </div>
         </Pulse>
       </div>
+
+      <BtnBack/>
     </div>
   );
 }

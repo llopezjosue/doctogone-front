@@ -7,7 +7,8 @@ import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import './MyRelatives.scss';
-import telLogo from '../../img/tel.png';
+import RelativeCard from './RelativeCard';
+
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -67,55 +68,13 @@ function MyRelatives() {
         </Tabs>
       </AppBar>
       <TabPanel value={value} index={0}>
-        <div className="pic">
-          <img src="https://via.placeholder.com/350" alt="" ></img>
-        </div>
-        <div className="contact-container">
-          <div className="contact-name">
-            <h2>Maria Carré</h2>
-            <h4>My daughter</h4>
-          </div>
-          <div className="logo-div">
-            <img src={ telLogo } alt="tel"></img>
-          </div>
-        </div>
-        <div className="presentation">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique mollis faucibus. Pellentesque a cursus felis, et volutpat ipsum. Duis non vehicula arcu. Pellentesque aliquet quam a odio lobortis dictum. Praesent condimentum a lacus quis tempor.</p>
-        </div>
+        <RelativeCard></RelativeCard>
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <div className="pic">
-          <img src="https://via.placeholder.com/350" alt="" ></img>
-        </div>
-        <div className="contact-container">
-          <div className="contact-name">
-            <h2>Pat Labruti</h2>
-            <h4>My neighbour</h4>
-          </div>
-          <div className="logo-div">
-            <img src={ telLogo } alt="tel"></img>
-          </div>
-        </div>
-        <div className="presentation">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique mollis faucibus. Pellentesque a cursus felis, et volutpat ipsum. Duis non vehicula arcu. Pellentesque aliquet quam a odio lobortis dictum. Praesent condimentum a lacus quis tempor.</p>
-        </div>
+        <RelativeCard></RelativeCard>
       </TabPanel>
       <TabPanel value={value} index={2}>
-        <div className="pic">
-          <img src="https://via.placeholder.com/350" alt="" ></img>
-        </div>
-        <div className="contact-container">
-          <div className="contact-name">
-            <h2>Isabelle</h2>
-            <h4>Nurse</h4>
-          </div>
-          <div className="logo-div">
-            <img src={ telLogo } alt="tel"></img>
-          </div>
-        </div>
-        <div className="presentation">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique mollis faucibus. Pellentesque a cursus felis, et volutpat ipsum. Duis non vehicula arcu. Pellentesque aliquet quam a odio lobortis dictum. Praesent condimentum a lacus quis tempor.</p>
-        </div>
+        <RelativeCard></RelativeCard>
       </TabPanel>
     </div>
   );
