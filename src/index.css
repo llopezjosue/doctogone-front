@@ -1,22 +1,36 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    'Roboto-Regular', 'Roboto-Light', 'CentraNo2-Bold' sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 @font-face {
-  font-family: "Roboto-Regular";
-  src: local("Roboto-Regular"), url("./fonts/roboto/Roboto-Regular.ttf") format("truetype");
+  font-family: 'Roboto-Regular';
+  src: local('Roboto-Regular'),
+    url('./fonts/roboto/Roboto-Regular.ttf') format('truetype'),
+    url('./fonts/roboto/Roboto-Regular.ttf') format('svg');
 }
 
 @font-face {
-  font-family: "Centra";
-  src: local("Centra"), url("./fonts/centra/Centra\ No2\ Bold.ttf") format("truetype");
+  font-family: 'Roboto-Light';
+  src: local('Roboto-Light'),
+    url('./fonts/roboto/Roboto-Light.ttf') format('truetype'),
+    url('./fonts/roboto/Roboto-Light.ttf') format('svg');
+}
+
+@font-face {
+  font-family: 'CentraNo2-Bold';
+  src: local('CentraNo2-Bold'),
+    url('./fonts/centra/Centra\ No2\ Bold.ttf') format('truetype'),
+    url('./fonts/centra/Centra\ No2\ Bold.ttf') format('svg');
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-family: 'source-code-pro', 'Menlo', 'Monaco', 'Consolas', 'Courier New',
+    monospace;
 }
 
 #root {
