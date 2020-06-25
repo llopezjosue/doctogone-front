@@ -33,7 +33,7 @@ function UserHome({ alertClick, setAlertClick }) {
             </div>
             <div>
               <h1>In 35 minutes</h1>
-              <p>Take two doliprane</p>
+              <p>Take one Exelon</p>
             </div>
           </div>
         )}

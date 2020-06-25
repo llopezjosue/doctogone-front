@@ -64,8 +64,8 @@ function CaregiverHome() {
             <img src="/icons/stats.svg" />
           </div>
           <div>
-            <h1>5/15 realisers</h1>
-            <p>-20% depuis la semaine </p>
+            <h1>5/10 Realized</h1>
+            <p>-20% since the start of the week</p>
           </div>
         </div>
         <Link to="/caregiver/his-planning" className="menu-item">
@@ -74,7 +74,7 @@ function CaregiverHome() {
           </div>
           <div>
             <h2>His planning</h2>
-            <p>mon programme du jour</p>
+            <p>His daily program</p>
           </div>
         </Link>
         <Link to="/caregiver" className="menu-item">
@@ -92,7 +92,7 @@ function CaregiverHome() {
           </div>
           <div>
             <h2>His info</h2>
-            <p>santé, adresse</p>
+            <p>Adress and Health</p>
           </div>
         </Link>
         <Link to="/caregiver/his-stats" className="menu-item">

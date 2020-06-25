@@ -63,7 +63,7 @@ export default function SimpleModal({ alertClick }) {
           <h2>It’s time to take your medication</h2>
 
           <div>
-            <strong>medoc 1 :</strong> 2 comprime
+            <strong> Donepezil : </strong> 2 pills
           </div>
         </div>
 
