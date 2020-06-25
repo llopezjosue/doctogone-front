@@ -90,7 +90,7 @@ export default function Login() {
           />
           
           <div>
-          <Link to="/user" type="button">
+          <Link to="/caregiver" type="button">
           <Button
             type="button"
             fullWidth
