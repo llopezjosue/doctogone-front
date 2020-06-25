@@ -32,12 +32,13 @@ function App() {
         <Route path="/caregiver/his-planning" exact component={HisPlanning} />
         <Route path="/caregiver/his-stats" exact component={HisStats} />
         <Route path="/caregiver/send-photos" exact component={SendPhotos} />
+        <Route path="/caregiver/chatbot" exact component={ChatBot} />
         <Route path="/user" exact component={UserHome} />
         <Route path="/user/sos" exact component={SOS} />
         <Route path="/user/my-infos" exact component={MyInfos} />
         <Route path="/user/my-planning" exact component={MyPlanning} />
         <Route path="/user/my-relatives" exact component={MyRelatives} />
-        <Route path="/user/chatbot" exact component={ChatBot} />
+        <Route path="/caregiver/chatbot" exact component={ChatBot} />
       </Switch>
     </Router>
   );

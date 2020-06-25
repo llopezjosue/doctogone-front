@@ -11,7 +11,7 @@ function Home() {
         </div>
         <section className="item">
           <div className="item-text">
-            <h1>Hello</h1>
+            <h1>Hello !</h1>
             <p>Tell us who you are</p>
           </div>
           <Link to="/login" type="button">
@@ -37,7 +37,7 @@ function Home() {
 
       <div className="light">
         <div className="container">
-          <h1>Why Findind Memo ? </h1>
+          <h1>Why Finding Memo ? </h1>
           <p>
           To support our loved ones through Alzheimer's
           </p>
@@ -60,7 +60,7 @@ function Home() {
         <h1>$250,174</h1>
         <p>The total lifetime cost estimation of care for someone with Alzheimer dementia in 2018.</p>
 
-        <p className="copyright">Copyright - 2020 balbalbal</p>
+        <p className="copyright">Copyright - 2020 Doctogone</p>
       </div>
     </div>
   );
