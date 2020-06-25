@@ -11,23 +11,23 @@ function Home() {
         </div>
         <section className="item">
           <div className="item-text">
-            <h1>Hello, </h1>
-            <p>tell us who you are ?</p>
+            <h1>Hello</h1>
+            <p>Tell us who you are</p>
           </div>
           <Link to="/login" type="button">
             <div className="button light">
               <img src="/icons/fleche-green.svg"></img>
-              <p>I'm a patient</p>
+              <p>I am a patient</p>
             </div>
           </Link>
           <Link to="/login2" type="button">
             <div className="button">
               <img src="/icons/fleche-white.svg"></img>
-              <p>I'm a caregiver</p>
+              <p>I am a caregiver</p>
             </div>
           </Link>
           <div className="item">
-            <p>I' already have account'</p>
+            <p>I already have an account</p>
           </div>
         </section>
 
@@ -40,14 +40,13 @@ function Home() {
 
       <div className="light">
         <div className="container">
-          <h1>Why l'application</h1>
+          <h1>Why Findind Memo ? </h1>
           <p>
-            pour pouvoir gagner des casques et des clavier et revendre pour un million
-            notre application
+          To support our loved ones through Alzheimer's
           </p>
           <div className="button">
             <img src="/icons/fleche-white.svg"></img>
-            <p>I'm a caregiver</p>
+            <p>More information</p>
           </div>
         </div>
       </div>
@@ -57,8 +56,12 @@ function Home() {
       </div>
 
       <div className="data-number">
-        <h1>24 5346</h1>
-        <p>le nombre de malade atteind de blablbalab</p>
+        <h1>50 million</h1>
+        <p>The number of Alzheimer's patients in the World</p>
+        <h1>100 million</h1>
+        <p>Projected number of Alzheimer's patients in 2040</p>
+        <h1>$250,174</h1>
+        <p>The total lifetime cost estimation of care for someone with Alzheimer dementia in 2018.</p>
 
         <p className="copyright">Copyright - 2020 balbalbal</p>
       </div>

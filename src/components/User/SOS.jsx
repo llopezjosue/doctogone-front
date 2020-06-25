@@ -10,14 +10,14 @@ function SOS() {
         <Pulse>
           <div className="sos-card">
             <div className="header">
-              <h1>Other urgency</h1>
+              <h1>Primary Emergency</h1>
             </div>
             <div className="img">
               <img src="/img/sos-health.png"></img>
             </div>
             <div className="footer">
               <button>
-                <div> Call urgency </div>
+                <div> Call Emergency </div>
 
                 <div className="icon">
                   <img src="/icons/phone.svg"></img>
@@ -30,7 +30,7 @@ function SOS() {
         <Pulse>
           <div className="sos-card">
             <div className="header">
-              <h1>Other urgency</h1>
+              <h1>Other Emergency </h1>
             </div>
             <div className="img">
               <img src="/img/sos-family.png"></img>
