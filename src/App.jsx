@@ -37,7 +37,7 @@ function App() {
         <Route path="/user/my-infos" exact component={MyInfos} />
         <Route path="/user/my-planning" exact component={MyPlanning} />
         <Route path="/user/my-relatives" exact component={MyRelatives} />
-        <Route path="/user/chatbot" exact component={ChatBot} />
+        <Route path="/caregiver/chatbot" exact component={ChatBot} />
       </Switch>
     </Router>
   );
