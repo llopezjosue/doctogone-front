@@ -62,5 +62,31 @@
       }
     }
   },
-  "appointments": {}
+  "appointments": {},
+  "events": [
+    {
+      "hour": "10 am",
+      "title": "Take your medecine !",
+      "description": "2gr of Doliprane",
+      "category": "medic"
+    },
+    {
+      "hour": "15:30 am",
+      "title": "Go à la sieste !",
+      "description": "Question pour un champion",
+      "category": "sleep"
+    },
+    {
+      "hour": "16:30 am",
+      "title": "Petit dejeuner !",
+      "description": "Croissants et jus d'orange",
+      "category": "meal"
+    },
+    {
+      "hour": "17:30 am",
+      "title": "Go à la sieste !",
+      "description": "Question pour un champion",
+      "category": "social"
+    }
+  ]
 }
