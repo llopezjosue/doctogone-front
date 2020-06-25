@@ -8,6 +8,7 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import SimpleMap from './Map';
+import './MyInfos.scss';
 
 const useStyles = makeStyles({
   table: {
@@ -29,19 +30,22 @@ export default function DenseTable() {
   const classes = useStyles();
 
   return (
-    <div>
-      <div> 
-        <h1>Who Am I ? </h1>
-        <h3>My name is David Grant </h3>
-        <h3> I live in Toulouse and I am 72years old </h3>
-      </div>
+    <div className="myInfos">
+      <h2>Who Am I ? </h2>
+      <div className="cardInfos"> 
       <div>
-        <h1> My medical records </h1>
+        <h3>My name is David Grant </h3>
+        <h3> I live in Toulouse and I am 72 years old </h3>
+      </div>
+       
+      </div>
+      <h2> My medical records </h2>
+      <div className="cardInfos"> 
         <h3> I'm blood type A- </h3>
         <h3> I have anemia </h3>
       </div>
       <div>
-      <h1>My treatment</h1>
+      <h2>My treatment</h2>
       </div>
     <TableContainer component={Paper}>
       <Table className={classes.table} size="small" aria-label="a dense table">
