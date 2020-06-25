@@ -8,6 +8,7 @@ import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import './MyRelatives.scss';
 import RelativeCard from './RelativeCard';
+import BtnBack from "../Elements/BtnBack";
 
 
 function TabPanel(props) {
@@ -59,6 +60,7 @@ function MyRelatives() {
   };
 
   return (
+    <div>
     <div className={classes.root}>
       <AppBar position="static">
         <Tabs value={value} onChange={handleChange} aria-label="simple tabs example">
@@ -76,6 +78,10 @@ function MyRelatives() {
       <TabPanel value={value} index={2}>
         <RelativeCard></RelativeCard>
       </TabPanel>
+    </div>
+    <div>
+    <BtnBack/>
+    </div>
     </div>
   );
 }
