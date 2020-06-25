@@ -71,6 +71,54 @@ function MyRelatives() {
     setValue(newValue);
   };
 
+  const handleClickLeftFam = () => {
+    if (familyIndex === 0) {
+      setFamilyIndex(family.length - 1);
+    } else {
+      setFamilyIndex(familyIndex - 1);
+    }
+  };
+
+  const handleClickRightFam = () => {
+    if (familyIndex === family.length - 1) {
+      setFamilyIndex(0);
+    } else {
+      setFamilyIndex(familyIndex + 1);
+    }
+  };
+
+  const handleClickLeftFr = () => {
+    if (friendsIndex === 0) {
+      setFriendsIndex(friends.length - 1);
+    } else {
+      setFriendsIndex(friendsIndex - 1);
+    }
+  };
+
+  const handleClickRightFr = () => {
+    if (friendsIndex === friends.length - 1) {
+      setFriendsIndex(0);
+    } else {
+      setFriendsIndex(friendsIndex + 1);
+    }
+  };
+
+  const handleClickLeftOthers = () => {
+    if (othersIndex === 0) {
+      setOthersIndex(others.length - 1);
+    } else {
+      setOthersIndex(othersIndex - 1);
+    }
+  };
+
+  const handleClickRightOthers = () => {
+    if (othersIndex === others.length - 1) {
+      setOthersIndex(0);
+    } else {
+      setOthersIndex(othersIndex + 1);
+    }
+  };
+
   return (
     <div className={classes.root}>
       <AppBar position="static">
@@ -85,6 +133,8 @@ function MyRelatives() {
         </Tabs>
       </AppBar>
       <TabPanel value={value} index={0}>
+        <button onClick={handleClickLeftFam}>Left</button>
+        <button onClick={handleClickRightFam}>Right</button>
         {family && (
           <RelativeCard
             name={family[familyIndex].name}
@@ -96,24 +146,28 @@ function MyRelatives() {
         )}
       </TabPanel>
       <TabPanel value={value} index={1}>
+        <button onClick={handleClickLeftFr}>Left</button>
+        <button onClick={handleClickRightFr}>Right</button>
         {friends && (
           <RelativeCard
-            name={friends[familyIndex].name}
-            relation={friends[familyIndex].relation}
-            phone={friends[familyIndex].phone}
-            imgUrl={friends[familyIndex].imgUrl}
-            presentation={friends[familyIndex].presentation}
+            name={friends[friendsIndex].name}
+            relation={friends[friendsIndex].relation}
+            phone={friends[friendsIndex].phone}
+            imgUrl={friends[friendsIndex].imgUrl}
+            presentation={friends[friendsIndex].presentation}
           />
         )}
       </TabPanel>
       <TabPanel value={value} index={2}>
+        <button onClick={handleClickLeftOthers}>Left</button>
+        <button onClick={handleClickRightOthers}>Right</button>
         {others && (
           <RelativeCard
-            name={others[familyIndex].name}
-            relation={others[familyIndex].relation}
-            phone={others[familyIndex].phone}
-            imgUrl={others[familyIndex].imgUrl}
-            presentation={others[familyIndex].presentation}
+            name={others[othersIndex].name}
+            relation={others[othersIndex].relation}
+            phone={others[othersIndex].phone}
+            imgUrl={others[othersIndex].imgUrl}
+            presentation={others[othersIndex].presentation}
           />
         )}
       </TabPanel>
