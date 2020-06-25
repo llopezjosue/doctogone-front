@@ -1,16 +1,12 @@
 .MuiAppBar-colorPrimary {
-  color: #3F3C3C!important;
-  background-color: white!important;
+  color: #3f3c3c !important;
+  background-color: white !important;
   margin: 15px;
   border-radius: 3px;
 }
 
-.PrivateTabIndicator-colorSecondary-4 {
-  background-color: #168D88!important;
-}
-
 .MuiAppBar-root {
-  width: 93%!important;
+  width: 93% !important;
   display: flex;
   z-index: 1100;
   box-sizing: border-box;
@@ -29,7 +25,7 @@
   min-height: 48px;
   text-align: center;
   flex-shrink: 0;
-  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
   font-weight: 500;
   line-height: 1.75;
   white-space: normal;
@@ -39,7 +35,7 @@
 
 .MuiTabs-flexContainer {
   display: flex;
-  justify-content: space-around!important;
+  justify-content: space-around !important;
 }
 
 .pic {
@@ -62,7 +58,7 @@
   margin-left: auto;
   margin-right: auto;
   background-color: whitesmoke;
-  box-shadow: 2px 5px 5px #168D88;
+  box-shadow: 2px 5px 5px #168d88;
 }
 
 .contact-name {
@@ -73,7 +69,8 @@
   border-right: 1px grey solid;
 }
 
-h2, h4 {
+h2,
+h4 {
   margin: 0;
 }
 
