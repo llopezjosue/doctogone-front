@@ -59,34 +59,34 @@ class SimpleForm extends Component {
   render() {
     return (
       <ChatBot
-        steps={[
-          {
-            id: '1',
-            message: 'What is your problem ?',
-            trigger: 'name',
-          },
-          {
-            id: 'name',
-            user: true,
-            trigger: '3',
-          },
-          {
-            id: '3',
-            message: 'Où vous situez vous ?',
-            trigger: 'gender',
-          },
-          {
-            id: 'gender',
-            user: true,
-            trigger: '5',
-          },
-          {
-            id: '5',
-            message: 'Vous pouvez vous rendre à l\'Hopital de Purpan qui se situe place du Docteur Joseph Baylac - 31300 Toulouse'
-          }
+      steps={[
+        {
+          id: '1',
+          message: 'What is your problem ?',
+          trigger: 'name',
+        },
+        {
+          id: 'name',
+          user: true,
+          trigger: '3',
+        },
+        {
+          id: '3',
+          message: 'Can I localize you?',
+          trigger: 'gender',
+        },
+        {
+          id: 'gender',
+          user: true,
+          trigger: '5',
+        },
+        {
+          id: '5',
+          message: 'You can go to the Hospital Purpan, place du Docteur Joseph Baylac - 31300 Toulouse'
+        }
 
-        ]}
-      />
+      ]}
+    />
     );
   }
 }

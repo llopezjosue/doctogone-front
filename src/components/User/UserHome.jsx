@@ -70,12 +70,12 @@ function UserHome({ alertClick, setAlertClick }) {
           </div>
           <div>
             <h2>SOS</h2>
-            <p>Alert 911 or Family</p>
+            <p>Alert Emergency or Family</p>
           </div>
         </Link>
       </div>
 
-      <div className="copyright">Copyright - 2020 Doctogone</div>
+      <div className="copyright">Copyright - 2020 Finding Memo</div>
     </div>
   );
 }
