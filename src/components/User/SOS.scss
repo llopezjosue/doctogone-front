@@ -1,5 +1,6 @@
 .sos {
   .group-cards {
+    margin-top: 60px;
     .sos-card {
       display: flex;
       flex-direction: column;
@@ -41,17 +42,20 @@
           border-radius: 4px;
           color: white;
           background-color: #168d88;
-          margin-top: 35px;
+          right: -40px;
           width: 100%;
           cursor: pointer;
           min-height: 70px;
           display: flex;
           align-items: center;
           justify-content: center;
+          font-family: "CentraNo2-Bold";
+          font-size: 1rem;
+          margin-top: 30px;
 
           .icon {
             position: relative;
-            right: -60px;
+            right: -40px;
             border-left: solid 1px #59a9a5;
             padding-left: 15px;
           }

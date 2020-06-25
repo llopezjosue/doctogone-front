@@ -1,15 +1,15 @@
-import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
-import { makeStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
-import Typography from '@material-ui/core/Typography';
-import Box from '@material-ui/core/Box';
-import './MyRelatives.scss';
-import RelativeCard from './RelativeCard';
-import datas from '../data/datas.json';
-import BtnBack from '../Elements/BtnBack';
+import React, { useState, useEffect } from "react";
+import PropTypes from "prop-types";
+import { makeStyles } from "@material-ui/core/styles";
+import AppBar from "@material-ui/core/AppBar";
+import Tabs from "@material-ui/core/Tabs";
+import Tab from "@material-ui/core/Tab";
+import Typography from "@material-ui/core/Typography";
+import Box from "@material-ui/core/Box";
+import "./MyRelatives.scss";
+import RelativeCard from "./RelativeCard";
+import datas from "../data/datas.json";
+import BtnBack from "../Elements/BtnBack";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -40,7 +40,7 @@ TabPanel.propTypes = {
 function a11yProps(index) {
   return {
     id: `simple-tab-${index}`,
-    'aria-controls': `simple-tabpanel-${index}`,
+    "aria-controls": `simple-tabpanel-${index}`,
   };
 }
 
@@ -124,19 +124,15 @@ function MyRelatives() {
     <div>
       <div className={classes.root}>
         <AppBar position="static">
-          <Tabs
-            value={value}
-            onChange={handleChange}
-            aria-label="simple tabs example"
-          >
+          <Tabs value={value} onChange={handleChange} aria-label="simple tabs example">
             <Tab label="Family" {...a11yProps(0)} />
             <Tab label="Friends" {...a11yProps(1)} />
             <Tab label="Others" {...a11yProps(2)} />
           </Tabs>
         </AppBar>
         <TabPanel value={value} index={0}>
-          <button onClick={handleClickLeftFam}>Left</button>
-          <button onClick={handleClickRightFam}>Right</button>
+          {/* <button onClick={handleClickLeftFam}>Left</button>
+          <button onClick={handleClickRightFam}>Right</button> */}
           {family && (
             <RelativeCard
               name={family[familyIndex].name}
@@ -148,8 +144,8 @@ function MyRelatives() {
           )}
         </TabPanel>
         <TabPanel value={value} index={1}>
-          <button onClick={handleClickLeftFr}>Left</button>
-          <button onClick={handleClickRightFr}>Right</button>
+          {/* <button onClick={handleClickLeftFr}>Left</button>
+          <button onClick={handleClickRightFr}>Right</button> */}
           {friends && (
             <RelativeCard
               name={friends[friendsIndex].name}
@@ -161,8 +157,8 @@ function MyRelatives() {
           )}
         </TabPanel>
         <TabPanel value={value} index={2}>
-          <button onClick={handleClickLeftOthers}>Left</button>
-          <button onClick={handleClickRightOthers}>Right</button>
+          {/* <button onClick={handleClickLeftOthers}>Left</button>
+          <button onClick={handleClickRightOthers}>Right</button> */}
           {others && (
             <RelativeCard
               name={others[othersIndex].name}
