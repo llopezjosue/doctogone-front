@@ -29,7 +29,6 @@ export default function Planning() {
 
   return (
     <Timeline align="alternate">
-
       <TimelineItem >
         <TimelineOppositeContent>
           <Typography variant="body2" color="textSecondary">
