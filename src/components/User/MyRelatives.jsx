@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
@@ -8,7 +8,7 @@ import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import './MyRelatives.scss';
 import RelativeCard from './RelativeCard';
-
+import datas from '../data/datas.json';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -53,6 +53,19 @@ const useStyles = makeStyles((theme) => ({
 function MyRelatives() {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
+  const persons = datas.relatives;
+  const [family, setFamily] = useState(
+    Object.keys(persons.family).map((member) => persons.family[member])
+  );
+  const [familyIndex, setFamilyIndex] = useState(0);
+  const [friends, setFriends] = useState(
+    Object.keys(persons.friends).map((member) => persons.friends[member])
+  );
+  const [friendsIndex, setFriendsIndex] = useState(0);
+  const [others, setOthers] = useState(
+    Object.keys(persons.others).map((member) => persons.others[member])
+  );
+  const [othersIndex, setOthersIndex] = useState(0);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -61,20 +74,48 @@ function MyRelatives() {
   return (
     <div className={classes.root}>
       <AppBar position="static">
-        <Tabs value={value} onChange={handleChange} aria-label="simple tabs example">
+        <Tabs
+          value={value}
+          onChange={handleChange}
+          aria-label="simple tabs example"
+        >
           <Tab label="Family" {...a11yProps(0)} />
           <Tab label="Friends" {...a11yProps(1)} />
           <Tab label="Others" {...a11yProps(2)} />
         </Tabs>
       </AppBar>
       <TabPanel value={value} index={0}>
-        <RelativeCard></RelativeCard>
+        {family && (
+          <RelativeCard
+            name={family[familyIndex].name}
+            relation={family[familyIndex].relation}
+            phone={family[familyIndex].phone}
+            imgUrl={family[familyIndex].imgUrl}
+            presentation={family[familyIndex].presentation}
+          />
+        )}
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <RelativeCard></RelativeCard>
+        {friends && (
+          <RelativeCard
+            name={friends[familyIndex].name}
+            relation={friends[familyIndex].relation}
+            phone={friends[familyIndex].phone}
+            imgUrl={friends[familyIndex].imgUrl}
+            presentation={friends[familyIndex].presentation}
+          />
+        )}
       </TabPanel>
       <TabPanel value={value} index={2}>
-        <RelativeCard></RelativeCard>
+        {others && (
+          <RelativeCard
+            name={others[familyIndex].name}
+            relation={others[familyIndex].relation}
+            phone={others[familyIndex].phone}
+            imgUrl={others[familyIndex].imgUrl}
+            presentation={others[familyIndex].presentation}
+          />
+        )}
       </TabPanel>
     </div>
   );
