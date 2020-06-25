@@ -31,70 +31,71 @@ export default function Planning() {
 
   return (
     <div>
-    <div>
-    <Timeline align="alternate">
-      {locDatas &&
-        locDatas.map((event) => {
-          return (
-            <TimelineItem>
-              <TimelineOppositeContent>
-                <Typography variant="body2" color="textSecondary">
-                  {event.hour}
-                </Typography>
-              </TimelineOppositeContent>
-              <TimelineSeparator>
-                <TimelineDot color="primary">
-                  {event.category === "medic" && <LocalHospitalIcon />}
-                  {event.category === "meal" && <FastfoodIcon />}
-                  {event.category === "sleep" && <HotelIcon />}
-                  {event.category === "social" && <LaptopMacIcon />}
-                </TimelineDot>
-                <TimelineConnector />
-              </TimelineSeparator>
-              <TimelineContent>
-                <Paper elevation={3} className={classes.paper}>
-                  <Typography variant="h6" component="h1">
-                    {event.title}
+      <div className="palnning">
+        <h2>Planning of the Day</h2>
+        <Timeline align="alternate">
+          {locDatas &&
+            locDatas.map((event) => {
+              return (
+                <TimelineItem>
+                  <TimelineOppositeContent>
+                    <Typography variant="body2" color="textSecondary">
+                      {event.hour}
+                    </Typography>
+                  </TimelineOppositeContent>
+                  <TimelineSeparator>
+                    <TimelineDot color="primary">
+                      {event.category === "medic" && <LocalHospitalIcon />}
+                      {event.category === "meal" && <FastfoodIcon />}
+                      {event.category === "sleep" && <HotelIcon />}
+                      {event.category === "social" && <LaptopMacIcon />}
+                    </TimelineDot>
+                    <TimelineConnector />
+                  </TimelineSeparator>
+                  <TimelineContent>
+                    <Paper elevation={3} className={classes.paper}>
+                      <Typography variant="h6" component="h1">
+                        {event.title}
+                      </Typography>
+                      <Typography> {event.description}</Typography>
+                    </Paper>
+                  </TimelineContent>
+                </TimelineItem>
+              );
+            })}
+          {datas.events.map((event) => {
+            return (
+              <TimelineItem>
+                <TimelineOppositeContent>
+                  <Typography variant="body2" color="textSecondary">
+                    {event.hour}
                   </Typography>
-                  <Typography> {event.description}</Typography>
-                </Paper>
-              </TimelineContent>
-            </TimelineItem>
-          );
-        })}
-      {datas.events.map((event) => {
-        return (
-          <TimelineItem>
-            <TimelineOppositeContent>
-              <Typography variant="body2" color="textSecondary">
-                {event.hour}
-              </Typography>
-            </TimelineOppositeContent>
-            <TimelineSeparator>
-              <TimelineDot color="primary">
-                {event.category === "medic" && <LocalHospitalIcon />}
-                {event.category === "meal" && <FastfoodIcon />}
-                {event.category === "sleep" && <HotelIcon />}
-                {event.category === "social" && <LaptopMacIcon />}
-              </TimelineDot>
-              <TimelineConnector />
-            </TimelineSeparator>
-            <TimelineContent>
-              <Paper elevation={3} className={classes.paper}>
-                <Typography variant="h6" component="h1">
-                  {event.title}
-                </Typography>
-                <Typography> {event.description}</Typography>
-              </Paper>
-            </TimelineContent>
-          </TimelineItem>
-        );
-      })}
-    </Timeline>
-    </div>
-    <div>
-    <BtnBack/>
-    </div>
+                </TimelineOppositeContent>
+                <TimelineSeparator>
+                  <TimelineDot color="primary">
+                    {event.category === "medic" && <LocalHospitalIcon />}
+                    {event.category === "meal" && <FastfoodIcon />}
+                    {event.category === "sleep" && <HotelIcon />}
+                    {event.category === "social" && <LaptopMacIcon />}
+                  </TimelineDot>
+                  <TimelineConnector />
+                </TimelineSeparator>
+                <TimelineContent>
+                  <Paper elevation={3} className={classes.paper}>
+                    <Typography variant="h6" component="h1">
+                      {event.title}
+                    </Typography>
+                    <Typography> {event.description}</Typography>
+                  </Paper>
+                </TimelineContent>
+              </TimelineItem>
+            );
+          })}
+        </Timeline>
+      </div>
+      <div>
+        <BtnBack />
+      </div>
     </div>
   );
 }
