@@ -11,6 +11,10 @@
     "@testing-library/user-event": "^7.2.1",
     "axios": "^0.19.2",
     "bootstrap": "^4.5.0",
+    "chart.js": "^2.9.3",
+    "d3": "^5.16.0",
+    "highcharts": "^8.1.2",
+    "highcharts-react-official": "^3.0.0",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-animate-on-scroll": "^2.1.5",
@@ -22,7 +26,9 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
     "reactstrap": "^8.5.1",
+    "react-simple-chatbot": "^0.6.1",
     "sal.js": "^0.7.6",
+    "styled-components": "^5.1.1",
     "yup": "^0.29.1"
   },
   "scripts": {

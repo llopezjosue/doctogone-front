@@ -14,6 +14,7 @@ import LocalHospitalIcon from "@material-ui/icons/LocalHospital";
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 import datas from "../../components/data/datas.json";
+import BtnBack from "../Elements/BtnBack";
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -29,6 +30,8 @@ export default function Planning() {
   let locDatas = JSON.parse(window.localStorage.getItem("event"));
 
   return (
+    <div>
+    <div>
     <Timeline align="alternate">
       {locDatas &&
         locDatas.map((event) => {
@@ -88,5 +91,10 @@ export default function Planning() {
         );
       })}
     </Timeline>
+    </div>
+    <div>
+    <BtnBack/>
+    </div>
+    </div>
   );
 }
