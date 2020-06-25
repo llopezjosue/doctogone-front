@@ -9,6 +9,7 @@ import Box from '@material-ui/core/Box';
 import './MyRelatives.scss';
 import RelativeCard from './RelativeCard';
 import datas from '../data/datas.json';
+import BtnBack from '../Elements/BtnBack';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -120,57 +121,62 @@ function MyRelatives() {
   };
 
   return (
-    <div className={classes.root}>
-      <AppBar position="static">
-        <Tabs
-          value={value}
-          onChange={handleChange}
-          aria-label="simple tabs example"
-        >
-          <Tab label="Family" {...a11yProps(0)} />
-          <Tab label="Friends" {...a11yProps(1)} />
-          <Tab label="Others" {...a11yProps(2)} />
-        </Tabs>
-      </AppBar>
-      <TabPanel value={value} index={0}>
-        <button onClick={handleClickLeftFam}>Left</button>
-        <button onClick={handleClickRightFam}>Right</button>
-        {family && (
-          <RelativeCard
-            name={family[familyIndex].name}
-            relation={family[familyIndex].relation}
-            phone={family[familyIndex].phone}
-            imgUrl={family[familyIndex].imgUrl}
-            presentation={family[familyIndex].presentation}
-          />
-        )}
-      </TabPanel>
-      <TabPanel value={value} index={1}>
-        <button onClick={handleClickLeftFr}>Left</button>
-        <button onClick={handleClickRightFr}>Right</button>
-        {friends && (
-          <RelativeCard
-            name={friends[friendsIndex].name}
-            relation={friends[friendsIndex].relation}
-            phone={friends[friendsIndex].phone}
-            imgUrl={friends[friendsIndex].imgUrl}
-            presentation={friends[friendsIndex].presentation}
-          />
-        )}
-      </TabPanel>
-      <TabPanel value={value} index={2}>
-        <button onClick={handleClickLeftOthers}>Left</button>
-        <button onClick={handleClickRightOthers}>Right</button>
-        {others && (
-          <RelativeCard
-            name={others[othersIndex].name}
-            relation={others[othersIndex].relation}
-            phone={others[othersIndex].phone}
-            imgUrl={others[othersIndex].imgUrl}
-            presentation={others[othersIndex].presentation}
-          />
-        )}
-      </TabPanel>
+    <div>
+      <div className={classes.root}>
+        <AppBar position="static">
+          <Tabs
+            value={value}
+            onChange={handleChange}
+            aria-label="simple tabs example"
+          >
+            <Tab label="Family" {...a11yProps(0)} />
+            <Tab label="Friends" {...a11yProps(1)} />
+            <Tab label="Others" {...a11yProps(2)} />
+          </Tabs>
+        </AppBar>
+        <TabPanel value={value} index={0}>
+          <button onClick={handleClickLeftFam}>Left</button>
+          <button onClick={handleClickRightFam}>Right</button>
+          {family && (
+            <RelativeCard
+              name={family[familyIndex].name}
+              relation={family[familyIndex].relation}
+              phone={family[familyIndex].phone}
+              imgUrl={family[familyIndex].imgUrl}
+              presentation={family[familyIndex].presentation}
+            />
+          )}
+        </TabPanel>
+        <TabPanel value={value} index={1}>
+          <button onClick={handleClickLeftFr}>Left</button>
+          <button onClick={handleClickRightFr}>Right</button>
+          {friends && (
+            <RelativeCard
+              name={friends[friendsIndex].name}
+              relation={friends[friendsIndex].relation}
+              phone={friends[friendsIndex].phone}
+              imgUrl={friends[friendsIndex].imgUrl}
+              presentation={friends[friendsIndex].presentation}
+            />
+          )}
+        </TabPanel>
+        <TabPanel value={value} index={2}>
+          <button onClick={handleClickLeftOthers}>Left</button>
+          <button onClick={handleClickRightOthers}>Right</button>
+          {others && (
+            <RelativeCard
+              name={others[othersIndex].name}
+              relation={others[othersIndex].relation}
+              phone={others[othersIndex].phone}
+              imgUrl={others[othersIndex].imgUrl}
+              presentation={others[othersIndex].presentation}
+            />
+          )}
+        </TabPanel>
+      </div>
+      <div>
+        <BtnBack />
+      </div>
     </div>
   );
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import Planning from './Planning';
+import './MyPlanning.scss';
 
 
 function MyPlanning() {

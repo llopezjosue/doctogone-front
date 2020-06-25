@@ -8,6 +8,7 @@ import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import "./MyRelatives.scss";
 import telLogo from "../../img/tel.png";
+import BtnBack from "../Elements/BtnBack";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -58,6 +59,7 @@ function SendPhotos() {
   };
 
   return (
+    <div>
     <div className={classes.root}>
       <AppBar position="static">
         <Tabs
@@ -136,6 +138,11 @@ function SendPhotos() {
           </p>
         </div>
       </TabPanel>
+    </div>
+    <div>
+    <BtnBack/>
+    </div>
+
     </div>
   );
 }
