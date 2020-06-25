@@ -16,7 +16,7 @@ function UserHome() {
           <p>visite de l'infirmière</p>
         </div>
       </div>
-      <Link to="/user/my-planing" className="menu-item">
+      <Link to="/user/my-planning" className="menu-item">
         <div className="img-div">
           <img src={logos} alt="logo" />
         </div>
