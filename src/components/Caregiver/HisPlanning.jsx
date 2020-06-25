@@ -13,6 +13,8 @@ import HotelIcon from "@material-ui/icons/Hotel";
 import LocalHospitalIcon from "@material-ui/icons/LocalHospital";
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
+import BtnBack from "../Elements/BtnBack";
+import '../User/MyPlanning.scss';
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -27,6 +29,8 @@ export default function HisPlanning() {
   const classes = useStyles();
 
   return (
+    <div>
+      <div>
     <Timeline align="alternate">
       <TimelineItem>
         <TimelineOppositeContent>
@@ -181,5 +185,10 @@ export default function HisPlanning() {
         </TimelineContent>
       </TimelineItem>
     </Timeline>
+    </div>
+    <div>
+    <BtnBack/>
+    </div>
+    </div>
   );
 }
