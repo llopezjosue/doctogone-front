@@ -7,7 +7,7 @@ function UserHome({ alertClick, setAlertClick }) {
   useEffect(() => {
     setTimeout(() => {
       setAlertClick(true);
-    }, 1500);
+    }, 20000);
   }, []);
 
   return (
