@@ -16,7 +16,7 @@ import Typography from "@material-ui/core/Typography";
 import datas from "../../components/data/datas.json";
 import PostEvent from "./PostEvent.jsx";
 import BackHomeAdmin from "./BackHomeAdmin";
-import "../User/MyPlanning.scss";
+import "../User/MyPlanning";
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -41,7 +41,7 @@ export default function HisPlanning() {
   return (
     <>
       <div>
-        <div>
+      <div className="palnning">
           <h2 style={{ textAlign: "center", margin: "15px" }}>His Planning</h2>
           <PostEvent whenClicking={whenClicking} useWhenClicking={useWhenClicking} />
           <Timeline align="alternate">

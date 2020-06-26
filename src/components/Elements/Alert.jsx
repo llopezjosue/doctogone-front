@@ -69,7 +69,7 @@ export default function SimpleModal({ alertClick }) {
 
         <div className="footer">
           <button onClick={handleClose}>
-            <div>Close </div>
+            <div>Ok, I just did it</div>
           </button>
         </div>
       </div>
