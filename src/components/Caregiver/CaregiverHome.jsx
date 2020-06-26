@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import logos from "../../img/twitter.png";
 import map from "../../img/map.jpg";
 import "./CaregiverHome.scss";
+import Footer from "./Footer"
 
 function CaregiverHome() {
   return (
@@ -106,12 +107,8 @@ function CaregiverHome() {
         </Link>
       </div>
 
-      <div className="copyrigdht">
-        Copyright - 2020
-        <Link to="/caregiver/chatbot">
-          <div>chatbot</div>
-        </Link>
-      </div>
+<Footer/>
+
     </div>
   );
 }
