@@ -14,13 +14,15 @@ function Home() {
             <h1>Hello !</h1>
             <p>Tell us who you are ?</p>
           </div>
-          <Link to="/login" type="button">
+          {/* <Link to="/login" type="button"> */}
+          <Link to="/user" type="button">
             <div className="button light">
               <img src="/icons/fleche-green.svg"></img>
               <p>I am a patient</p>
             </div>
           </Link>
-          <Link to="/login2" type="button">
+          {/* <Link to="/login2" type="button"> */}
+          <Link to="/caregiver" type="button">
             <div className="button">
               <img src="/icons/fleche-white.svg"></img>
               <p>I am a caregiver</p>
@@ -52,28 +54,24 @@ function Home() {
 
       <div className="data-number">
         <div className="infosStat">
-        <img className=" " src="/icons/a.svg"></img>
+          <img className=" " src="/icons/a.svg"></img>
           <h1>50 million</h1>
           <p>The number of Alzheimer's patients in the World</p>
         </div>
 
-     
-          <div className="infosStat">
+        <div className="infosStat">
           <img className=" " src="/icons/b.svg"></img>
-            <h1>100 million</h1>
-            <p>Projected number of Alzheimer's patients in 2040</p>
-          </div>
-      
+          <h1>100 million</h1>
+          <p>Projected number of Alzheimer's patients in 2040</p>
+        </div>
 
-      
-          <div className="infosStat">
+        <div className="infosStat">
           <img className=" " src="/icons/c.svg"></img>
-            <h1>$250,174</h1>
-            <p>
-              The total lifetime cost estimation of care for someone with Alzheimer
-              dementia in 2018.
-            </p>
-         
+          <h1>$250,174</h1>
+          <p>
+            The total lifetime cost estimation of care for someone with Alzheimer dementia
+            in 2018.
+          </p>
         </div>
 
         <p className="copyright">Copyright - 2020 Doctogone</p>

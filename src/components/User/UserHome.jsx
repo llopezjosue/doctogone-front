@@ -75,7 +75,7 @@ function UserHome({ alertClick, setAlertClick }) {
         </Link>
       </div>
 
-      <div className="copyright">Copyright - 2020 Finding Memo</div>
+      <div className="copyrigdht">Copyright - 2020 Finding Memo</div>
     </div>
   );
 }
