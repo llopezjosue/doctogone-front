@@ -42,7 +42,7 @@ export default function HisPlanning() {
     <>
       <div>
         <div>
-          <h2>Post an event</h2>
+          <h2 style={{ textAlign: "center", margin: "15px" }}>His Planning</h2>
           <PostEvent
             whenClicking={whenClicking}
             useWhenClicking={useWhenClicking}
