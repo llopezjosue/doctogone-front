@@ -98,25 +98,22 @@ function Home() {
 
       <div className="data-number">
         <h1 className={!isScrolling ? "isOpac" : "isVisible"}>
-          <span className="dynamics-number">{nbPatient}</span> million
+          {nbPatient} million
         </h1>
         <p className={!isScrolling ? "isOpac" : "isVisible"}>
           The number of Alzheimer's patients in the World
         </p>
         <h1 className={!isScrolling ? "isOpac" : "isVisible"}>
-          <span className="dynamics-number">{nbProjected}</span> million
+          {nbProjected} million
         </h1>
         <p className={!isScrolling ? "isOpac" : "isVisible"}>
           Projected number of Alzheimer's patients in 2040
         </p>
-        <h1 className={!isScrolling ? "isOpac" : "isVisible"}>
-          $<span className="dynamics-number">{cost}</span>
-        </h1>
+        <h1 className={!isScrolling ? "isOpac" : "isVisible"}>${cost}</h1>
         <p className={!isScrolling ? "isOpac" : "isVisible"}>
           The total lifetime cost estimation of care for someone with Alzheimer
           dementia in 2018.
         </p>
-
         <p className="copyright">Copyright - 2020 Doctogone</p>
       </div>
     </div>
