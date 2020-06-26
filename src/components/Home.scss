@@ -90,6 +90,18 @@
     margin: -15px;
     margin-top: 15px;
   }
+
+  .isOpac {
+    opacity: 0;
+  }
+
+  .isVisible {
+    opacity: 1;
+    transition: opacity 2s ease-in;
+  }
+
+  .dynamics-number {
+  }
 }
 
 .copyright {
