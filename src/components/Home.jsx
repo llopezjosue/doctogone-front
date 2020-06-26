@@ -56,17 +56,19 @@ function Home() {
           <img src="/icons/logo-2.svg"></img>
         </div>
         <section className="item">
-          <div className="item-text">
+          <div className="item-text hello">
             <h1>Hello !</h1>
-            <p>Tell us who you are</p>
+            <p>Tell us who you are ?</p>
           </div>
-          <Link to="/login" type="button">
+          {/* <Link to="/login" type="button"> */}
+          <Link to="/user" type="button">
             <div className="button light">
               <img src="/icons/fleche-green.svg"></img>
               <p>I am a patient</p>
             </div>
           </Link>
-          <Link to="/login2" type="button">
+          {/* <Link to="/login2" type="button"> */}
+          <Link to="/caregiver" type="button">
             <div className="button">
               <img src="/icons/fleche-white.svg"></img>
               <p>I am a caregiver</p>
@@ -75,7 +77,7 @@ function Home() {
         </section>
 
         <div className="illustration-home">
-          <img src="/img/home.png"></img>
+          <img className="w-100-img " src="/img/home.png"></img>
         </div>
 
         <div></div>
@@ -84,7 +86,9 @@ function Home() {
       <div className="light">
         <div className="container">
           <h1>Why Finding Memo ? </h1>
-          <p>To support our loved ones through Alzheimer's</p>
+          <p className="textSizeLight">
+            To support our loved ones through Alzheimer's
+          </p>
           <div className="button">
             <img src="/icons/fleche-white.svg"></img>
             <p>More information</p>
@@ -93,27 +97,48 @@ function Home() {
       </div>
 
       <div className="img-block">
-        <img src="/img/home-2.png"></img>
+        <img className="w-100-img " src="/img/home-2.png"></img>
       </div>
 
       <div className="data-number">
-        <h1 className={!isScrolling ? "isOpac" : "isVisible"}>
-          {nbPatient} million
-        </h1>
-        <p className={!isScrolling ? "isOpac" : "isVisible"}>
-          The number of Alzheimer's patients in the World
-        </p>
-        <h1 className={!isScrolling ? "isOpac" : "isVisible"}>
-          {nbProjected} million
-        </h1>
-        <p className={!isScrolling ? "isOpac" : "isVisible"}>
-          Projected number of Alzheimer's patients in 2040
-        </p>
-        <h1 className={!isScrolling ? "isOpac" : "isVisible"}>${cost}</h1>
-        <p className={!isScrolling ? "isOpac" : "isVisible"}>
-          The total lifetime cost estimation of care for someone with Alzheimer
-          dementia in 2018.
-        </p>
+        <div className="infosStat">
+          <img
+            className={!isScrolling ? "isOpac" : "isVisible"}
+            src="/icons/a.svg"
+          ></img>
+          <h1 className={!isScrolling ? "isOpac" : "isVisible"}>
+            {nbPatient} million
+          </h1>
+          <p className={!isScrolling ? "isOpac" : "isVisible"}>
+            The number of Alzheimer's patients in the World
+          </p>
+        </div>
+
+        <div className="infosStat">
+          <img
+            className={!isScrolling ? "isOpac" : "isVisible"}
+            src="/icons/b.svg"
+          ></img>
+          <h1 className={!isScrolling ? "isOpac" : "isVisible"}>
+            {nbProjected} million
+          </h1>
+          <p className={!isScrolling ? "isOpac" : "isVisible"}>
+            Projected number of Alzheimer's patients in 2040
+          </p>
+        </div>
+
+        <div className="infosStat">
+          <img
+            className={!isScrolling ? "isOpac" : "isVisible"}
+            src="/icons/c.svg"
+          ></img>
+          <h1 className={!isScrolling ? "isOpac" : "isVisible"}>${cost}</h1>
+          <p className={!isScrolling ? "isOpac" : "isVisible"}>
+            The total lifetime cost estimation of care for someone with
+            Alzheimer dementia in 2018.
+          </p>
+        </div>
+
         <p className="copyright">Copyright - 2020 Doctogone</p>
       </div>
     </div>

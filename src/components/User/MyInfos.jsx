@@ -1,14 +1,14 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Table from '@material-ui/core/Table';
-import TableBody from '@material-ui/core/TableBody';
-import TableCell from '@material-ui/core/TableCell';
-import TableContainer from '@material-ui/core/TableContainer';
-import TableHead from '@material-ui/core/TableHead';
-import TableRow from '@material-ui/core/TableRow';
-import Paper from '@material-ui/core/Paper';
-import SimpleMap from './Map';
-import './MyInfos.scss';
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import Table from "@material-ui/core/Table";
+import TableBody from "@material-ui/core/TableBody";
+import TableCell from "@material-ui/core/TableCell";
+import TableContainer from "@material-ui/core/TableContainer";
+import TableHead from "@material-ui/core/TableHead";
+import TableRow from "@material-ui/core/TableRow";
+import Paper from "@material-ui/core/Paper";
+import SimpleMap from "./Map";
+import "./MyInfos.scss";
 
 const useStyles = makeStyles({
   table: {
@@ -17,13 +17,13 @@ const useStyles = makeStyles({
 });
 
 function createData(name, calories) {
-  return { name, calories};
+  return { name, calories };
 }
 
 const rows = [
-  createData('Donepezil', 2),
-  createData('Exelon', 1),
-  createData('Exiba',4),
+  createData("Donepezil", 2),
+  createData("Exelon", 1),
+  createData("Exiba", 4),
 ];
 
 export default function DenseTable() {
@@ -31,50 +31,56 @@ export default function DenseTable() {
 
   return (
     <div className="myInfos">
-      <h2>Who Am I ? </h2>
-      <div className="cardInfos"> 
+      <div className="containerInfos">
+        <h1>Who Am I ? </h1>
+        <div className="cardInfos">
+          <div className="txt-my-infos">
+            <h4>
+              My name is <span>David Grant</span>
+            </h4>
+            <p> I live 3 place des Carmes Toulouse and I am 72 yo</p>
+          </div>
+        </div>
+
+        <h1> My medical records </h1>
+
+        <div className="cardInfos">
+          <div className="txt-my-infos">
+            <ul>
+              <li>I'm blood type A-</li>
+              <li>I have anemia</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <h1>My treatment</h1>
+        </div>
+        <TableContainer component={Paper}>
+          <Table className={classes.table} size="small" aria-label="a dense table">
+            <TableHead>
+              <TableRow>
+                <TableCell>Medicines</TableCell>
+                <TableCell align="right">Quantities per Day</TableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {rows.map((row) => (
+                <TableRow key={row.name}>
+                  <TableCell component="th" scope="row">
+                    {row.name}
+                  </TableCell>
+                  <TableCell align="right">{row.calories}</TableCell>
+                  <TableCell align="right">{row.fat}</TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </TableContainer>
+      </div>
+
       <div>
-        <h3>My name is David Grant </h3>
-        <h3> I live 3 place des Carmes Toulouse and I am 72 yo</h3>
+        <SimpleMap />
       </div>
-       
-      </div>
-      <h2> My medical records </h2>
-      <div className="cardInfos"> 
-        <h3> I'm blood type A- </h3>
-        <h3> I have anemia </h3>
-      </div>
-      <div>
-      <h2>My treatment</h2>
-      </div>
-    <TableContainer component={Paper}>
-      <Table className={classes.table} size="small" aria-label="a dense table">
-        <TableHead>
-          <TableRow>
-            <TableCell>Medicines</TableCell>
-            <TableCell align="right">Quantities per Day</TableCell>
-           
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {rows.map((row) => (
-            <TableRow key={row.name}>
-              <TableCell component="th" scope="row">
-                {row.name}
-              </TableCell>
-              <TableCell align="right">{row.calories}</TableCell>
-              <TableCell align="right">{row.fat}</TableCell>
-            </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
-    <div>
-      <SimpleMap />
-    </div>
     </div>
   );
 }
-
-
-

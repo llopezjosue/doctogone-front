@@ -1,5 +1,7 @@
 .makeStyles-paper-1 {
-  width: 76% !important;
+  width: 100% !important;
+  max-width: 273px !important;
+  min-width: 272px !important;
   border: 0px !important;
   padding: 30px !important;
   position: absolute !important;
@@ -34,6 +36,7 @@
     text-align: center;
     height: 100%;
     justify-content: space-around;
+    width: 100%;
 
     .img {
       animation: slidein 1s infinite;

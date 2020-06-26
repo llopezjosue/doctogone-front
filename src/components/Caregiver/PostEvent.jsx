@@ -3,6 +3,11 @@ import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import Select from "@material-ui/core/Select";
 import Grid from "@material-ui/core/Grid";
+import ExpansionPanel from "@material-ui/core/ExpansionPanel";
+import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails";
+import Typography from "@material-ui/core/Typography";
+import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary";
+import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
 class PostEvent extends React.Component {
   constructor(props, useStyles) {
@@ -46,78 +51,99 @@ class PostEvent extends React.Component {
 
   render() {
     return (
-      <div className="complete-form" style={{ padding: "30px" }}>
-        <form noValidate autoComplete="off">
-          <Grid container>
-            <Grid item xs={12}>
-              <TextField
-                id="standard-basic"
-                label="Title"
-                value={this.state.title}
-                onChange={this.handleChangeTitle}
-                fullWidth
-                style={{ marginBottom: "10px" }}
-              />
-            </Grid>
-            <Grid item xs={12}>
-              <TextField
-                id="standard-basic"
-                label="Description"
-                value={this.state.description}
-                onChange={this.handleChangeDescription}
-                fullWidth
-                style={{ marginBottom: "10px" }}
-              />
-            </Grid>
-            <Grid item xs={12}>
-              <TextField
-                id="time"
-                label="Hour"
-                type="time"
-                defaultValue="07:30"
-                InputLabelProps={{
-                  shrink: true,
-                }}
-                inputProps={{
-                  step: 300, // 5 min
-                }}
-                value={this.state.hour}
-                onChange={this.handleChangeHour}
-                style={{ marginBottom: "10px" }}
-              />
-            </Grid>
-            <Grid item xs={12}>
-              <Select
-                native
-                value={this.state.category}
-                onChange={this.handleChangeCategory}
-                inputProps={{
-                  name: "age",
-                  id: "age-native-simple",
-                }}
-                fullWidth
-                style={{ marginBottom: "25px" }}
+      <>
+        <ExpansionPanel style={{ margin: "0 30px 30px 30px" }}>
+          <ExpansionPanelSummary
+            expandIcon={<ExpandMoreIcon />}
+            aria-controls="panel1a-content"
+            id="panel1a-header"
+          >
+            <Typography>
+              <h3 style={{ margin: "0" }}>Post an event</h3>
+            </Typography>
+          </ExpansionPanelSummary>
+          <ExpansionPanelDetails>
+            <div className="complete-form">
+              <form noValidate autoComplete="off">
+                <Grid container>
+                  <Grid item xs={12}>
+                    <TextField
+                      id="standard-basic"
+                      label="Title"
+                      value={this.state.title}
+                      onChange={this.handleChangeTitle}
+                      fullWidth
+                      // style={{ marginBottom: "px" }}
+                    />
+                  </Grid>
+                  <Grid item xs={12}>
+                    <TextField
+                      id="standard-basic"
+                      label="Description"
+                      value={this.state.description}
+                      onChange={this.handleChangeDescription}
+                      fullWidth
+                      style={{ marginBottom: "15px" }}
+                    />
+                  </Grid>
+                  <Grid item xs={12}>
+                    <TextField
+                      id="time"
+                      label="Hour"
+                      type="time"
+                      defaultValue="07:30"
+                      InputLabelProps={{
+                        shrink: true,
+                      }}
+                      inputProps={{
+                        step: 300, // 5 min
+                      }}
+                      value={this.state.hour}
+                      onChange={this.handleChangeHour}
+                      style={{ marginBottom: "15px" }}
+                    />
+                  </Grid>
+                  <Grid item xs={12}>
+                    <Select
+                      native
+                      value={this.state.category}
+                      onChange={this.handleChangeCategory}
+                      inputProps={{
+                        name: "age",
+                        id: "age-native-simple",
+                      }}
+                      fullWidth
+                      style={{ marginBottom: "25px" }}
+                    >
+                      <option
+                        value=""
+                        selected
+                        disabled
+                        hidden
+                        style={{ color: "red" }}
+                      >
+                        Category
+                      </option>
+                      <option value="medic">medic</option>
+                      <option value="meal">meal</option>
+                      <option value="sleep">sleep</option>
+                      <option value="social">social</option>
+                    </Select>
+                  </Grid>
+                </Grid>
+              </form>
+              <Button
+                onClick={this.handleSubmit}
+                variant="contained"
+                color="primary"
+                disableElevation
               >
-                <option value="" selected disabled hidden>
-                  Choose a category
-                </option>
-                <option value="medic">medic</option>
-                <option value="meal">meal</option>
-                <option value="sleep">sleep</option>
-                <option value="social">social</option>
-              </Select>
-            </Grid>
-          </Grid>
-        </form>
-        <Button
-          onClick={this.handleSubmit}
-          variant="contained"
-          color="primary"
-          disableElevation
-        >
-          Send
-        </Button>
-      </div>
+                Send
+              </Button>
+            </div>
+          </ExpansionPanelDetails>
+        </ExpansionPanel>
+      </>
     );
   }
 }

@@ -15,7 +15,7 @@ import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 import datas from "../../components/data/datas.json";
 import PostEvent from "./PostEvent.jsx";
-import BtnBack from "../Elements/BtnBack";
+import BackHomeAdmin from "./BackHomeAdmin";
 import "../User/MyPlanning.scss";
 
 const useStyles = makeStyles((theme) => ({
@@ -42,11 +42,8 @@ export default function HisPlanning() {
     <>
       <div>
         <div>
-          <h2>Post an event</h2>
-          <PostEvent
-            whenClicking={whenClicking}
-            useWhenClicking={useWhenClicking}
-          />
+          <h2 style={{ textAlign: "center", margin: "15px" }}>His Planning</h2>
+          <PostEvent whenClicking={whenClicking} useWhenClicking={useWhenClicking} />
           <Timeline align="alternate">
             {locDatas &&
               locDatas.map((event) => {
@@ -108,7 +105,7 @@ export default function HisPlanning() {
           </Timeline>
         </div>
         <div>
-          <BtnBack />
+          <BackHomeAdmin />
         </div>
       </div>
     </>

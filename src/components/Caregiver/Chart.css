@@ -2,4 +2,9 @@
   text-align: center;
   margin-top: 35px;
   margin-bottom: 25px;
+  padding: 30px;
+}
+
+.stats-container {
+  padding-right: 30px;
 }

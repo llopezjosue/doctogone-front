@@ -1,16 +1,17 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import ChatBot from 'react-simple-chatbot';
-import './ChatBot.scss';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import ChatBot from "react-simple-chatbot";
+import "./ChatBot.scss";
+import BackHomeAdmin from "../Caregiver/BackHomeAdmin";
 
 class Review extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      name: '',
-      gender: '',
-      age: '',
+      name: "",
+      gender: "",
+      age: "",
     };
   }
 
@@ -24,7 +25,7 @@ class Review extends Component {
   render() {
     const { name, gender, age } = this.state;
     return (
-      <div style={{ width: '100%' }}>
+      <div style={{ width: "100%" }}>
         <h3>Summary</h3>
         <table>
           <tbody>
@@ -58,35 +59,39 @@ Review.defaultProps = {
 class SimpleForm extends Component {
   render() {
     return (
-      <ChatBot
-      steps={[
-        {
-          id: '1',
-          message: 'What is your problem ?',
-          trigger: 'name',
-        },
-        {
-          id: 'name',
-          user: true,
-          trigger: '3',
-        },
-        {
-          id: '3',
-          message: 'Can I localize you?',
-          trigger: 'gender',
-        },
-        {
-          id: 'gender',
-          user: true,
-          trigger: '5',
-        },
-        {
-          id: '5',
-          message: 'You can go to the Hospital Purpan, place du Docteur Joseph Baylac - 31300 Toulouse'
-        }
+      <div>
+        <ChatBot
+          steps={[
+            {
+              id: "1",
+              message: "What is your problem ?",
+              trigger: "name",
+            },
+            {
+              id: "name",
+              user: true,
+              trigger: "3",
+            },
+            {
+              id: "3",
+              message: "Can I localize you?",
+              trigger: "gender",
+            },
+            {
+              id: "gender",
+              user: true,
+              trigger: "5",
+            },
+            {
+              id: "5",
+              message:
+                "You can go to the Hospital Purpan, place du Docteur Joseph Baylac - 31300 Toulouse",
+            },
+          ]}
+        />
 
-      ]}
-    />
+        <BackHomeAdmin />
+      </div>
     );
   }
 }
