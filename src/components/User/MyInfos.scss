@@ -1,53 +1,71 @@
-.myInfos{
+.myInfos {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  .cardInfos {
     display: flex;
-    flex-direction: column;
-  
-    .cardInfos{
-      display: flex;
-      border-radius: 3px;
-      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.06), 0px 2px 14px rgba(0, 0, 0, 0.04),
-        0px 6px 10px rgba(0, 0, 0, 0.1);
-      background-color: white;
-      margin-left: 15px;
-      margin-right: 15px;
-      margin-bottom: 15px;
-      text-decoration: none;
-      color: black;
-     
-      h2 {
-        margin: 0;
-        padding: 0;
-        font-size: 20px;
-        text-align: center;
-       justify-content: center;
-      }
-      h3 {
-          font-size: 15px;
-          margin: 5px;
-        padding: 5px;
-      }
-      p {
-        margin: 0;
-        padding: 0;
-      }
-  
-      .img-div {
-        display: flex;
-        width: 20%;
-        margin: 5%;
-  
-        img {
-          width: 100%;
-        }
-      }
-  
-      p {
-        text-align: start;
+    border-radius: 3px;
+    /* box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.06), 0px 2px 14px rgba(0, 0, 0, 0.04), 0px 6px 10px rgba(0, 0, 0, 0.1); */
+    background-color: white;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    text-decoration: none;
+    color: black;
+    background-color: #cae8e6;
+    border-radius: 45px;
+
+    h2 {
+      margin: 0;
+      padding: 0;
+      font-size: 20px;
+      text-align: center;
+      justify-content: center;
+    }
+    h3 {
+      font-size: 15px;
+      margin: 5px;
+      padding: 5px;
+    }
+    p {
+      margin: 0;
+      padding: 0;
+      font-family: "Roboto-Light";
+    }
+
+    h4 {
+      margin-bottom: 10px;
+      span {
+        font-family: "Roboto-Light";
       }
     }
-  
-    .user-map {
-      width: 100vw;
+
+    .img-div {
+      display: flex;
+      width: 20%;
+      margin: 5%;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    p {
+      text-align: start;
     }
   }
-  
+
+  .user-map {
+    width: 100vw;
+  }
+
+  .containerInfos {
+    padding: 1rem;
+  }
+}
+.txt-my-infos {
+  text-align: center !important;
+
+  padding: 20px;
+}

@@ -3,10 +3,30 @@
 }
 
 .palnning {
-  padding: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 
   h2 {
     font-family: "CentraNo2-Bold";
     text-align: center;
+  }
+
+  .MuiTypography-h6 {
+    font-size: 17px;
+    font-family: "CentraNo2-Bold" !important;
+    font-weight: 500;
+    line-height: 1.6;
+    letter-spacing: 0.0075em;
+    color: #ff4a02;
+    text-align: center !important;
+  }
+
+  .MuiTypography-body1 {
+    font-size: 1rem;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.00938em;
+    text-align: center !important;
   }
 }
